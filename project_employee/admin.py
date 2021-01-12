@@ -1,6 +1,5 @@
 from django.contrib import admin
 
-from .models import ProjectEmployee,Pnumber
+from .models import ProjectEmployee
 
 admin.site.register(ProjectEmployee)
-admin.site.register(Pnumber)

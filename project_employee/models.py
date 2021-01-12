@@ -6,11 +6,12 @@ class ProjectEmployee(models.Model):
 
     class Meta:
         verbose_name_plural = 'Project Employee'
-        
-    Pname  = models.CharField(max_length=250)
-    Plocation  = models.CharField(max_length=250)
+    
+    pnumber = models.AutoField(auto_created=True, primary_key=True)
+    pname  = models.CharField(max_length=250)
+    plocation  = models.CharField(max_length=250)
     #ForeignKey
-    Dnum = models.ForeignKey("department.Dnumber",on_delete=models.CASCADE)
+    dnum = models.ForeignKey("department.Department", on_delete=models.CASCADE, null=True, blank=True)
 
-class Pnumber(models.Model):
-    pnumber  = models.CharField(max_length=250)
+    def __str__(self):
+        return self.pname

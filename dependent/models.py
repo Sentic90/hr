@@ -5,10 +5,13 @@ class DependentName(models.Model):
     class Meta:
         verbose_name_plural = 'Dependent Name'
     
-    Dependent_name  =  models.CharField(max_length=250)
-    Sex  =  models.CharField(max_length=250)
-    Bdate  =  models.CharField(max_length=250)
-    Relationship =  models.CharField(max_length=250)
+    dependent_name  =  models.CharField(max_length=250, primary_key=True, default='dependant')
+    sex  =  models.CharField(max_length=250)
+    bdate  =  models.DateField(null=True, blank=True)
+    relationship =  models.CharField(max_length=250)
     # ForienKey
-    Essn  =  models.ForeignKey("employee.Ssn", on_delete=models.CASCADE)
+    essn  =  models.ForeignKey("employee.Employee", on_delete=models.CASCADE, blank=True, null=True)
+
+    def __str__(self):
+        return self.dependent_name
     

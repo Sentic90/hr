@@ -1,12 +1,14 @@
 from django.db import models
+from employee.models import Employee
+from project_employee.models import ProjectEmployee
 
 
 class WorksOn(models.Model):
     class Meta:
         verbose_name_plural = "Works On"
 
-    Hours = models.CharField(max_length=250)
+    hours = models.CharField(max_length=250)
     
     #forignkey 
-    Pno  = models.ForeignKey("project_employee.Pnumber",on_delete=models.CASCADE)
-    Essn  = models.ForeignKey("employee.Ssn",on_delete=models.CASCADE)
+    Pno  = models.ForeignKey(ProjectEmployee, on_delete=models.CASCADE, null=True, blank=True)
+    Essn  = models.ForeignKey(Employee, on_delete=models.CASCADE, null=True, blank=True)

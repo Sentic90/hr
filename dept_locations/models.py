@@ -1,10 +1,14 @@
 from django.db import models
 
+
 class DeptLocations(models.Model):
     class Meta:
         verbose_name_plural = 'Depts Locations'
 
-    Dlocation = models.CharField(max_length=250)
+    dlocation = models.CharField(max_length=250)
 
     #ForeignKey
-    Dnumber = models.ForeignKey("department.Dnumber", on_delete=models.CASCADE)
+    dnumber = models.ForeignKey("department.Department", on_delete=models.CASCADE, blank=True, null=True)
+
+    def __str__(self):
+        return self.dlocation
