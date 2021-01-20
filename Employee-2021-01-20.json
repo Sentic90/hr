@@ -1,0 +1,14 @@
+[
+    {
+        "Fname": "ALi", 
+        "Minit": "Muh", 
+        "Lname": "Mual", 
+        "Bdate": "1992", 
+        "Address": "47", 
+        "Sex": "male", 
+        "Salary": "2000", 
+        "Super_ssn": "", 
+        "dno": "", 
+        "ssn": 1
+    }
+]
