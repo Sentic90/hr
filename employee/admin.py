@@ -3,6 +3,7 @@ from django.contrib.auth.models import User, Group
 from .models import Employee
 from import_export.admin import ImportExportActionModelAdmin
 
+
 @admin.register(Employee)
 class EmployeeAdmin(ImportExportActionModelAdmin, admin.ModelAdmin):
     list_display = ['Fname', 'Minit', 'Lname', 'ssn', 'Bdate', 'Address', 'Sex', 'Salary', 'Super_ssn', 'dno']

@@ -16,6 +16,7 @@ class Employee(models.Model):
     Super_ssn  = models.ForeignKey('self', on_delete=models.CASCADE,blank=True,null=True)
     dno = models.ForeignKey("department.Department", on_delete=models.CASCADE,blank=True,null=True)
     ssn  = models.AutoField(primary_key=True)
+    
     def __str__(self):
         return str(self.ssn)
 
