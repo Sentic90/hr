@@ -88,3 +88,4 @@ class employee (models.model):
             relationship= models.CharField(max_length=9, choices=Relationships, default='Son')
 
 
+
