@@ -1,5 +1,4 @@
 from django.contrib import admin
-from .models import WorksOn
+from works_on.models import works_on
 
-
-admin.site.register(WorksOn)
+admin.site.register(works_on)

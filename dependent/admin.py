@@ -1,5 +1,4 @@
 from django.contrib import admin
-from .models import DependentName
+from dependent.models import Dependent
 
-
-admin.site.register(DependentName)
+admin.site.register(Dependent)

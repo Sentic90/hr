@@ -1,12 +1,9 @@
 from django.db import models
 
+class works_on(models.Model):
+    Pno   = models.ForeignKey("project.Project", verbose_name="Project Number",on_delete=models.CASCADE)
+    Essn  = models.ForeignKey("employee.Employee", on_delete=models.CASCADE)
+    Hours = models.CharField(max_length=200)
 
-class WorksOn(models.Model):
-    class Meta:
-        verbose_name_plural = "Works On"
-
-    Hours = models.CharField(max_length=250)
-    
-    #forignkey 
-    Pno  = models.ForeignKey("project_employee.ProjectEmployee",on_delete=models.CASCADE)
-    Essn  = models.ForeignKey("employee.Employee",on_delete=models.CASCADE)
+    def __str__(self):
+        return self.Pno + " - " + self.Essn
