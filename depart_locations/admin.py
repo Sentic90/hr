@@ -3,11 +3,10 @@ from depart_locations.models import Depart_Location
 
 @admin.register(Depart_Location)
 class DepartLocationAdmin(admin.ModelAdmin):
-    pass
-    # list_display = ()
-    # list_filter = ()
-    # list_editable = ()
-    # ordering = ()
-    # search_fields = ()
+    list_display = ('dnumber', 'dlocation')
+    list_filter = ('dlocation',)
+    list_editable = ('dlocation',)
+    ordering = ('dnumber', 'dlocation')
+    search_fields = ('dlocation',)
     # fieldsets = ()
     # actions = ()

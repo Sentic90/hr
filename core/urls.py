@@ -27,6 +27,6 @@ urlpatterns = [
 ]
 
 
-admin.site.site_header = "Morsal | Human Resource panel"
-admin.site.site_title = "HR admin"
-admin.site.index_title = "HR page"
+admin.site.site_header = "Human Resource Admin Panel"
+admin.site.site_title = "HR Admin"
+admin.site.index_title = "HR Panel"

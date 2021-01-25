@@ -3,11 +3,10 @@ from dependent.models import Dependent
 
 @admin.register(Dependent)
 class DependentAdmin(admin.ModelAdmin):
-    pass
-    # list_display = ()
-    # list_filter = ()
-    # list_editable = ()
-    # ordering = ()
-    # search_fields = ()
+    list_display = ('Essn', 'Dependent_name', 'Relationship')
+    list_filter = ('Essn', 'gender')
+    # list_editable = ('Dependent_name', 'Relationship')
+    ordering = ('Essn', 'Dependent_name', 'bdate')
+    search_fields = ('Dependent_name',)
     # fieldsets = ()
     # actions = ()
