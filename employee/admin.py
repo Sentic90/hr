@@ -11,9 +11,9 @@ class EmployeeAdmin(admin.ModelAdmin):
     list_display = ('ssn', 'fname', 'lname', 'gender', 'salary', 'dno')
     list_filter = ('gender', 'dno')
     ordering = ('fname',)
-    search_fields = ('fname', 'minit', 'lname')
+    search_fields = ('fname', 'minit', 'lname', 'address')
     readonly_fields = ('ssn', 'super_ssn', 'dno')
-    # list_editable = ()
+    list_editable = ('fname', 'lname')
     # actions = ()
     fieldsets = (
         (
