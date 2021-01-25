@@ -25,3 +25,8 @@ urlpatterns = [
     path('project/', include('project.urls')),
     path('works_on/', include('works_on.urls')),
 ]
+
+
+admin.site.site_header = "Morsal | Human Resource panel"
+admin.site.site_title = "HR admin"
+admin.site.index_title = "HR page"

@@ -18,4 +18,4 @@ class Employee(models.Model):
     dno = models.ForeignKey("department.Department", verbose_name="Department Number", on_delete=models.SET_NULL, blank=True, null=True)
 
     def __str__(self):
-        return self.fname + self.lname
+        return self.fname + " " + self.lname

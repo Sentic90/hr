@@ -6,4 +6,4 @@ class works_on(models.Model):
     Hours = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.Pno + " - " + self.Essn
+        return str(self.Pno) + " - " + str(self.Essn)

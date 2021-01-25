@@ -8,4 +8,4 @@ class Depart_Location(models.Model):
     dnumber = models.ForeignKey('department.Department', on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.dnumber + " - " + self.dlocation
+        return str(self.dnumber) + " - " + self.dlocation
